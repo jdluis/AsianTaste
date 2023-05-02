@@ -1,3 +1,3 @@
-export const global = {
- PAGE_TITLE: "Asian Taste"
+export const Titles = {
+ RESTAURANT_TITLE: "Asian Taste"
 }

@@ -1,0 +1,22 @@
+.nav-menu_container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px .4rem;
+    background-color: antiquewhite;
+}
+
+.nav_link {
+    height: 32px;
+    width: 32px;
+}
+
+.menu-icon {
+    color: rgb(210, 171, 65);
+    height: auto;
+    width: 32px;
+}
