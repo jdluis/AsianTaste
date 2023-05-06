@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ClientProfile from './pages/client/ClientProfile';
-import './App.css';
 import NoFoundPage from './pages/NoFoundPage';
 import NavMenu from './components/Mobile/NavMenu';
+import './App.css';
 
 function App() {
   return (
