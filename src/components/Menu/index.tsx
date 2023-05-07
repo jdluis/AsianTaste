@@ -1,26 +1,44 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import MenuItem from "./MenuItem";
+import menuService from "../../services/menu.service";
 
-export interface MenuItemInterface {
+export interface ITMenuItemInterface {
     name: string;
+    description: string;
+    /* ingredients: Array<string>; */
     price: number;
     isActive: boolean;
- }
-type MenuItemsInterface = Array<MenuItemInterface>
- 
-const MenuRestaurant: FC = () => {
-    const [menu, setMenu] = useState < MenuItemsInterface | undefined>(undefined);
+    _id: number;
+}
+type MenuItemsInterface = Array<ITMenuItemInterface>
 
-    return ( <div>
+const MenuRestaurant: FC = () => {
+    
+    const [menu, setMenu] = useState<MenuItemsInterface | undefined>(undefined);
+
+    const getMenu = async (): Promise<ITMenuItemInterface[]> => {
+        const response = await menuService.getAll();
+        console.log(response);
+        setMenu(response.data)
+        return response.data;
+    }
+
+    useEffect(() => {
+        getMenu()
+    }, [])
+
+
+    return (<div>
         <h3>Menu Restaurant</h3>
-      
+
+        {!menu && ("The menu is updating, sorry for the inconveniences")}
         {menu?.map(item => {
             return (
-                <MenuItem item = {item} />
+                <MenuItem key={item._id} item={item} />
             )
         })}
-       
-    </div> );
+
+    </div>);
 }
- 
+
 export default MenuRestaurant;
