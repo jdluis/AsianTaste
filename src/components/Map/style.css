@@ -1,0 +1,7 @@
+.map_container {
+    min-width: 350px;
+    min-height: 300px;
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}

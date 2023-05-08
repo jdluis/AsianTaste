@@ -1,0 +1,39 @@
+.item_container {
+    box-shadow: 3px 2px 1px 1px rgba(0, 0, 0, 0.089);
+    background-color: rgb(255, 255, 255);
+    max-width: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2em;
+    width: 100%;
+}
+
+.item_container h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.item_container .description {
+    color: rgb(101, 101, 101);
+    font-size: 0.7em;
+}
+
+
+.item_container p span{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.img_container {
+    max-width: 90%;
+    height: auto;
+    padding: 0 .4em;
+}
+
+.img_container img{
+    object-fit: cover;
+    width: 100%;
+}

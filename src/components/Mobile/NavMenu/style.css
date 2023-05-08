@@ -8,6 +8,7 @@
     align-items: center;
     padding: 4px .4rem;
     background-color: antiquewhite;
+    z-index: 99999;
 }
 
 .nav_link {

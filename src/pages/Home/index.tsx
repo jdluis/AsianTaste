@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Titles } from "../../../dictionary";
-import './style.css'
 import MenuRestaurant from "../../components/Menu";
-//interface HomePageProps {}
+import './style.css'
+import Map from "../../components/Map";
 
-const HomePage: FC/* <HomePageProps> */ = () => {
+const HomePage: FC = () => {
     return (
         <div id="home">
             <div className="introduction_container">
@@ -20,7 +20,7 @@ const HomePage: FC/* <HomePageProps> */ = () => {
                     </div>
                 </main>
                 <div className="img_container">
-                    <img src="/public/bg-intro2.png" alt="" />
+                    <img src="/bg-intro2.png" alt="" />
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ const HomePage: FC/* <HomePageProps> */ = () => {
 
             <section className="bg-blue about_container">
                 <div className="img_container">
-                    <img src="/public/bg-asianEating.png" alt="eating rice asian taste" />
+                    <img src="/bg-asianEating.png" alt="eating rice asian taste" />
                 </div>
                 <div className="main_container">
                     <header>
@@ -56,26 +56,64 @@ const HomePage: FC/* <HomePageProps> */ = () => {
                 </div>
             </section>
 
-            <section className="bg-vainilla">
+            <section className="bg-vainilla menu_container">
                 <MenuRestaurant />
             </section>
 
-            <section>
-                <div>
-                    <button>Full Menu</button>
+            <section className="print-menu_container">
+                <div className="text_container">
+                    <h2>Print Menus</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium dolore dolorem nisi quam tenetur amet, esse repudiandae cumque et?</p>
+                </div>
+                <div className="btn_container">
+                    <button className="btn-action">Full Menu</button>
                     <button>Dowload Menu</button>
                 </div>
             </section>
 
-            <section className="bg-vainilla">
+            <section className="bg-vainilla contact_container">
+                <div className="text_container">
+                    <h2>Locations</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium dolore </p>
+                </div>
+                <div className="location-time_container">
+                    <address className="contact-info-container">
+                        <h4>Asian Taste Restaurant</h4>
+                        <p>8625 Crosss Street, USA New York City, Spain</p>
 
-                <address>
-                    location
-                </address>
+                        <a href="tel: ">(+34) 66 88 45 25</a>
+
+                        <ul>
+                            Hours
+                            <li>Mon-Thu: <span>3.30-9pm</span></li>
+                            <li>Fr-Sat: <span>3.30-10pm</span></li>
+                        </ul>
+                    </address>
+                    <div>
+                        <Map />
+                    </div>
+                </div>
             </section>
 
-            <footer className="bg-dark">
-                Footer
+            {/* Only in medium and largue devices */}
+            <footer className="bg-dark footer_container">
+                <h5>Asian Taste</h5>
+
+                <ul>
+                    <li>About Us</li>
+                    <li>Full Menu</li>
+                </ul>
+
+                <ul>
+                    <li>Testimonials</li>
+                    <li>Locations</li>
+                </ul>
+                <ul>
+                    <a href="#"> Twitter</a>
+                    <a href="#"> Instagram</a>
+                    <a href="#"> Linkedin</a>
+                </ul>
+
             </footer>
         </div>);
 }

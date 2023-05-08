@@ -1,3 +1,21 @@
 #home {
-    padding-bottom: 50px; /* Height of NavBAR Menu */
+    padding-bottom: 40px;
+    /* Height of NavBAR Menu */
+}
+
+.bg-vainilla {
+    background-color: #fff1d9;
+}
+
+.bg-blue {
+    background-color: #4245e6;
+    width: 100%;
+}
+
+.bg-vainilla_light {
+    background-color: #fffaf0;
+}
+
+.bg-dark {
+    background-color: #361d31;
 }
