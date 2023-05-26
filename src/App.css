@@ -19,3 +19,46 @@
 .bg-dark {
     background-color: #361d31;
 }
+
+.floating_container {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-image: url('/logo/sombrero-de-bambu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  /* añadir transparencia a la imagen*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+   /*  overflow: hidden; */
+}
+
+.floating_container a  {
+    font-weight: 800;
+    font-size: .7em;
+    padding: 15px 0;
+}
+
+.floating_container a:nth-child(2) {
+    transform: rotate(10deg);
+    color: #ff5808;
+ }
+
+.floating_container a:nth-child(1)  {
+    transform: rotate(10deg);
+    color: #4245e6;
+}
+
+.floating_container a:focus,
+a:active {
+    color: #0331ff;
+    scale: 1.4;
+    transition: all 1s;
+}
