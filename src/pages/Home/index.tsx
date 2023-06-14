@@ -1,8 +1,9 @@
 import { FC } from "react";
 import { Titles } from "../../../dictionary";
 import MenuRestaurant from "../../components/Menu";
-import './style.css'
 import Map from "../../components/Map";
+import { Link } from "react-router-dom";
+import './style.css'
 
 const HomePage: FC = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage: FC = () => {
                     <div className="btn_container">
                         <button className="btn-action">Order Now</button>
                         <button className="btn-info">Menu</button>
+                        <Link className="btn-action" to={'/client/reservation'}>Reserve</Link>
                     </div>
                 </main>
                 <div className="img_container">

@@ -7,10 +7,15 @@ import SignBtn from './components/Auth/SignBtn';
 import { Auth0Provider } from '@auth0/auth0-react';
 import LogoutButton from './components/Auth/LogOutBtn';
 import Profile from './components/Auth/Profile';
+import Reservations from './pages/client/Reservations';
+import { useAuth0 } from "@auth0/auth0-react";
 import './App.css';
 
 
 function App() {
+  const { user, isAuthenticated } = useAuth0();
+  
+
   return (
     <>
       <BrowserRouter>
@@ -23,8 +28,8 @@ function App() {
         >
           <NavMenu />
           <div className='floating_container circle'>
-             <LogoutButton />
-              <SignBtn />
+            <LogoutButton />
+            <SignBtn />
           </div>
           <Profile />
           <Routes>
@@ -33,10 +38,13 @@ function App() {
               {/* <Route path="/menu" /> */}
             </Route>
             {/*           Para añadir rutas a la misma pagina,  slo ue quiero con el home*/}
-            <Route path="/client">
-              <Route index element={<ClientProfile />} />
-              <Route path=":number" element={<ClientProfile />} />
-            </Route>
+            {isAuthenticated && (
+              <Route path="/client">
+                <Route index element={<ClientProfile />} />
+                <Route path=":number" element={<ClientProfile />} />
+                <Route path="reservation" element={<Reservations />} />
+              </Route>
+            )}
 
             {/* <Route path="/admin">
             <Route index element={<AdminPanel />} />
