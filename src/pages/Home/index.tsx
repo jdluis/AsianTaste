@@ -59,7 +59,11 @@ const HomePage: FC = () => {
             </section>
 
             <section className="bg-vainilla menu_container">
-                <MenuRestaurant />
+            <div className="text_container">
+                <h2>Chef's species</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, voluptatem sint quisquam provident quod nobis?</p>
+            </div>
+                <MenuRestaurant isActive={true} isSpecial={true} />
             </section>
 
             <section className="print-menu_container">
@@ -68,7 +72,7 @@ const HomePage: FC = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium dolore dolorem nisi quam tenetur amet, esse repudiandae cumque et?</p>
                 </div>
                 <div className="btn_container">
-                    <button className="btn-action">Full Menu</button>
+                    <Link className="btn-action" to={"menu"}>Full Menu</Link>
                     <button>Dowload Menu</button>
                 </div>
             </section>

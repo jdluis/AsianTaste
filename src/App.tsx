@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ClientProfile from './pages/client/ClientProfile';
 import NoFoundPage from './pages/NoFoundPage';
@@ -10,6 +10,7 @@ import Profile from './components/Auth/Profile';
 import Reservations from './pages/client/Reservations';
 import { useAuth0 } from "@auth0/auth0-react";
 import './App.css';
+import FullMenu from './pages/client/FullMenu';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<HomePage />} />
-              {/* <Route path="/menu" /> */}
+              <Route path="/menu" element={<FullMenu />} />
             </Route>
             {/*           Para añadir rutas a la misma pagina,  slo ue quiero con el home*/}
             {isAuthenticated && (

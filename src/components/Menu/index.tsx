@@ -8,20 +8,44 @@ export interface ITMenuItemInterface {
     /* ingredients: Array<string>; */
     price: number;
     isActive: boolean;
+    isSpecial: boolean;
     image: string;
     _id: number;
 }
+
+interface MenuRestaurantProps {
+    isActive: boolean;
+    isSpecial: boolean;
+  }
+  
 type MenuItemsInterface = Array<ITMenuItemInterface>
 
-const MenuRestaurant: FC = () => {
+const MenuRestaurant: FC<MenuRestaurantProps> = ({isActive, isSpecial}) => {
 
     const [menu, setMenu] = useState<MenuItemsInterface | undefined>(undefined);
 
     const getMenu = async (): Promise<ITMenuItemInterface[]> => {
-        const response = await menuService.getAll();
-        console.log(response);
-        setMenu(response.data)
-        return response.data;
+        //Get Special and actived.
+        if (isActive === true && isSpecial=== true) {
+            const response = await menuService.getAllSpecial();
+            console.log(response);
+            setMenu(response.data)
+            return response.data;
+
+        // Get All Data Active
+        } else if( isActive === true && isSpecial === false) {
+            const response = await menuService.getAllActive();
+            console.log(response);
+            setMenu(response.data)
+            return response.data;
+
+        // Get All Data
+        } else {
+            const response = await menuService.getAll();
+            console.log(response);
+            setMenu(response.data)
+            return response.data;
+        }
     }
 
     useEffect(() => {
@@ -31,11 +55,6 @@ const MenuRestaurant: FC = () => {
 
     return (
         <>
-            <div className="text_container">
-                <h2>Chef's species</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, voluptatem sint quisquam provident quod nobis?</p>
-            </div>
-
             <div className="menu-list_container">
                 {!menu && ("The menu is updating, sorry for the inconveniences")}
                 {menu?.map(item => {
