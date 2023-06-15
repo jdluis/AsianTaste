@@ -5,12 +5,13 @@ import './style.css'
 export interface ITMenuItemInterface {
     name: string;
     description: string;
-    /* ingredients: Array<string>; */
+    ingredients: Array<string>;
     price: number;
     isActive: boolean;
     isSpecial: boolean;
     image: string;
     _id: number;
+    category: string;
 }
 
 interface MenuRestaurantProps {
@@ -32,7 +33,7 @@ const MenuRestaurant: FC<MenuRestaurantProps> = ({isActive, isSpecial}) => {
             setMenu(response.data)
             return response.data;
 
-        // Get All Data Active
+        // Get All Data Active and special or not.
         } else if( isActive === true && isSpecial === false) {
             const response = await menuService.getAllActive();
             console.log(response);

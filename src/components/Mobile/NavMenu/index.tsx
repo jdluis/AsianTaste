@@ -18,7 +18,7 @@ const NavMenu: FC/* <NavMenuProps> */ = () => {
                 <>
                     <Link className="nav_link" to={'/menu'}> <img className="menu-icon" src="/sushi.png" alt="menu sushi icon" /> </Link>
                     <Link className="nav_link" to={'/'}> <img className="menu-icon" src="/logo/sombrero-de-bambu.png" alt="logo asian taste" /></Link>
-                    <a href="tel:+34678567876"><img src="./call.png" alt="call icon" /></a>
+                    <a className="link-tel" href="tel:+34678567876"><img src="./call.png" alt="call icon" /></a>
                     <button className="btn-icon"><img src="./cart.png" alt="cart icon" /></button>
                 </>
             )}

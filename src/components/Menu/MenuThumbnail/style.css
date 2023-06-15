@@ -1,0 +1,48 @@
+.thumbnail-container {
+    display: flex;
+    border: 1px solid black;
+}
+
+.thumbnail-container .item_container h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.thumbnail-container .text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 .6em;
+}
+
+.thumbnail-container .text-container .menu_item-price {
+    font-weight: 600;
+}
+
+.thumbnail-container .text-container .description{
+    font-size: .7em;
+}
+
+
+
+.thumbnail-container .text-container .text-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+
+.thumbnail-container .item_container p span {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.thumbnail-container .image-container {
+    background-color: rgba(151, 161, 161, 0.712);
+}
+
+.thumbnail-container .image-container img {
+    object-fit: cover;
+    height: 100%;
+    
+}

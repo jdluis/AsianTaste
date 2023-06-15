@@ -1,7 +1,18 @@
+* {
+  
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 #home {
     padding-bottom: 40px;
     /* Height of NavBAR Menu */
 }
+
+/* BG Colors */
 
 .bg-vainilla {
     background-color: #fff1d9;
@@ -19,6 +30,8 @@
 .bg-dark {
     background-color: #361d31;
 }
+
+/* Text Size */
 
 .floating_container {
     position: fixed;
