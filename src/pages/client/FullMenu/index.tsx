@@ -4,7 +4,7 @@ import { ITMenuItemInterface } from "../../../components/Menu";
 import MenuThumbnail from "../../../components/Menu/MenuThumbnail";
 import './style.css';
 
-interface FullMenuProps { }
+interface FullMenuProps {}
 
 type MenuItemsInterface = Array<ITMenuItemInterface>
 
@@ -25,11 +25,11 @@ const FullMenu: FC<FullMenuProps> = () => {
 
 
     return (
-        <div className="fullMenu-container">
+        <div id='FullMenu' className="fullMenu-container">
             <div className="title_container">
                 <h2 className="title">Menu</h2>
             </div>
-            <div className="menu-container">
+            <div className="menu-container" id="menuPDF">
                 <div className="logo-container">
                     <img src="./logo/sombrero-de-bambu.png" alt="logo" />
                 </div>

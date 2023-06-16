@@ -3,9 +3,22 @@ import { Titles } from "../../../dictionary";
 import MenuRestaurant from "../../components/Menu";
 import Map from "../../components/Map";
 import { Link } from "react-router-dom";
+import { dowloadPdf } from "../../utils/dowloadPdf";
+import { render } from "@testing-library/react";
+import FullMenu from "../client/FullMenu";
 import './style.css'
 
 const HomePage: FC = () => {
+    const handlePdfDowload = () => {
+        //Allow to dowloadPdf take the id and the info for make a PDF with Menu
+        render(<FullMenu />)
+        dowloadPdf('menuPDF')
+
+        //Search inside the DOM for id and delete render component.
+        const renderDOM = document.getElementById('FullMenu')?.parentElement
+        renderDOM?.remove();
+    }
+
     return (
         <div id="home">
             <div className="introduction_container">
@@ -73,7 +86,7 @@ const HomePage: FC = () => {
                 </div>
                 <div className="btn_container">
                     <Link className="btn-action" to={"menu"}>Full Menu</Link>
-                    <button>Dowload Menu</button>
+                    <button onClick={() => handlePdfDowload()}>Dowload Menu</button>
                 </div>
             </section>
 
