@@ -1,0 +1,7 @@
+.btn-logout{
+    background-color: transparent;
+    border: none;
+}
+.btn-logout:hover, .btn-logout:focus-visible, .btn-logout:active {
+    border: none;
+}

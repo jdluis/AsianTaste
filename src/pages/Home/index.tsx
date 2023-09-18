@@ -21,7 +21,7 @@ const HomePage: FC = () => {
 
     return (
         <div id="home">
-            <div className="introduction_container">
+            <div className="introduction_container bg-vainilla">
                 <main className="main_container">
                     <header>
                         <h1>{Titles.RESTAURANT_TITLE}</h1>
@@ -31,7 +31,7 @@ const HomePage: FC = () => {
                     <div className="btn_container">
                         <button className="btn-action">Order Now</button>
                         <button className="btn-info">Menu</button>
-                        <Link className="btn-action" to={'/client/reservation'}>Reserve</Link>
+                        <Link className="btn-action linkBtn" to={'/client/reservation'}>Reserve</Link> 
                     </div>
                 </main>
                 <div className="img_container">
@@ -85,8 +85,8 @@ const HomePage: FC = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium dolore dolorem nisi quam tenetur amet, esse repudiandae cumque et?</p>
                 </div>
                 <div className="btn_container">
-                    <Link className="btn-action" to={"menu"}>Full Menu</Link>
-                    <button onClick={() => handlePdfDowload()}>Dowload Menu</button>
+                    <Link className="linkBtn btn-action"  to={"menu"}>Full Menu</Link>
+                    <button className="btn-info" onClick={() => handlePdfDowload()}>Dowload Menu</button>
                 </div>
             </section>
 

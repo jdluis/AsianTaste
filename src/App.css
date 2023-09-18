@@ -35,15 +35,8 @@ a {
 
 .floating_container {
     position: fixed;
-    right: 10px;
-    top: 10px;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    background-image: url('/logo/sombrero-de-bambu.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  /* añadir transparencia a la imagen*/
+    right: 5px;
+    top: 5px;
 
     display: flex;
     flex-direction: column;

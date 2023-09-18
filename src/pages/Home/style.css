@@ -57,8 +57,8 @@
     border-radius: 15px;
     font-weight: 800;
     text-align: left;
+    box-shadow: 6px 3px 3px rgba(0, 0, 0, 0.365);
 }
-
 
 .btn_container .btn-action {
     background-color: #ff5808;
@@ -68,6 +68,7 @@
 .btn_container .btn-info {
     background-color: rgb(255, 255, 255);
     color: black;
+    
 }
 
 .about_container {

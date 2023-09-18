@@ -1,0 +1,7 @@
+.btn-signup{
+    background-color: transparent;
+    border: none;
+}
+.btn-signup:hover, .btn-signup:focus-visible, .btn-signup:active {
+    border: none;
+}
