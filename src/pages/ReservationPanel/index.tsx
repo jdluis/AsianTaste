@@ -7,6 +7,7 @@ interface ReservationPanelProps {
  
 const ReservationPanel: FC<ReservationPanelProps> = () => {
     return ( <>
+    <h2>ReservationPanel</h2>
     </> );
 }
  
