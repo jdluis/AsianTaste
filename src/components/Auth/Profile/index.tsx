@@ -5,7 +5,7 @@ import "./style.css"
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user, isAuthenticated)
+  /* console.log(user, isAuthenticated) */
 
   if (isLoading) {
     return (<div>Loading ...</div>)

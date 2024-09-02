@@ -1,0 +1,19 @@
+.flexible-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.centerContainer {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+}
+
+.text-center {
+    font-size: xx-large;
+    text-align: center;
+}

@@ -29,21 +29,18 @@ const MenuRestaurant: FC<MenuRestaurantProps> = ({isActive, isSpecial}) => {
         //Get Special and actived.
         if (isActive === true && isSpecial=== true) {
             const response = await menuService.getAllSpecial();
-            console.log(response);
             setMenu(response.data)
             return response.data;
 
         // Get All Data Active and special or not.
         } else if( isActive === true && isSpecial === false) {
             const response = await menuService.getAllActive();
-            console.log(response);
             setMenu(response.data)
             return response.data;
 
         // Get All Data
         } else {
             const response = await menuService.getAll();
-            console.log(response);
             setMenu(response.data)
             return response.data;
         }

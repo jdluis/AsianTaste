@@ -14,7 +14,6 @@ const FullMenu: FC<FullMenuProps> = () => {
 
     const getMenu = async (): Promise<ITMenuItemInterface[]> => {
         const response = await menuService.getAllActive();
-        console.log(response);
         setMenu(response.data)
         return response.data;
     }

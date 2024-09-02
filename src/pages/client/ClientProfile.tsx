@@ -1,22 +1,30 @@
-import { useState, useEffect, FC } from 'react';
-import { useParams } from "react-router-dom";
+import { useAuth0 } from '@auth0/auth0-react';
+import { useState, FC } from 'react';
+
 /* interface ClientProfileProps { } */
 
 const ClientProfile: FC/* <ClientProfileProps> */ = () => {
-    const [message, setMessage] = useState('')
-    const { number } = useParams();
+    const { user } = useAuth0();
 
-    useEffect(() => {
-        if (number) {
-            setMessage(`This number is ${number}`)
-        } else {
-            setMessage(`No Number given`)
-        }
-    }, [number])
 
     return (<div>
-        <h2>Client ClientProfile</h2>
-        <p>{message}</p>
+        <h2>Client {user?.name}</h2>
+
+        <div>
+            <h3>Lista Reservas</h3>
+            <ul>
+                <li>1</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>ºPedidos en local</h3>
+
+            <ul>
+                <li>1</li>
+            </ul>
+        </div>
+
     </div>);
 }
 
